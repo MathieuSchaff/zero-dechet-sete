@@ -5,10 +5,12 @@ import {
   jsonb,
   timestamp,
   check,
+  uuid,
 } from "drizzle-orm/pg-core";
 import { placeTypeEnum } from "../enums";
 import { customType } from "drizzle-orm/pg-core";
 import { sql } from "drizzle-orm";
+import { profiles } from "../profiles";
 const geography = customType<{ data: unknown; driverData: unknown }>({
   dataType() {
     // pas de parenthèses ici → Drizzle ne cassera pas le SQL
@@ -33,6 +35,7 @@ export const place = pgTable(
     conditions: text("conditions").array(),
     accessibility: text("accessibility").array(),
     contact: jsonb("contact"),
+    submittedBy: uuid("submitted_by").references(() => profiles.id),
     requiredCards: text("required_cards").array(),
     photos: jsonb("photos"),
     source: text("source"),
