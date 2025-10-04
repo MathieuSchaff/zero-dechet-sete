@@ -8,6 +8,20 @@
       "when": 1759179755336,
       "tag": "0000_lazy_the_renegades",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1759523545688,
+      "tag": "0001_fix-structure",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1759531553345,
+      "tag": "0002_last_banshee",
+      "breakpoints": true
     }
   ]
 }

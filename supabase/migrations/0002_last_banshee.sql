@@ -1,0 +1,2 @@
+ALTER TABLE "place" ADD COLUMN "submitted_by" uuid;--> statement-breakpoint
+ALTER TABLE "place" ADD CONSTRAINT "place_submitted_by_profiles_id_fk" FOREIGN KEY ("submitted_by") REFERENCES "public"."profiles"("id") ON DELETE no action ON UPDATE no action;
