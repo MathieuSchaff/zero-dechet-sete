@@ -22,6 +22,20 @@
       "when": 1759531553345,
       "tag": "0002_last_banshee",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1759572413749,
+      "tag": "0003_fix-rls-security",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1759573023873,
+      "tag": "0004_secure-functions",
+      "breakpoints": true
     }
   ]
 }
