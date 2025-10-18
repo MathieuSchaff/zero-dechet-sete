@@ -1,6 +1,7 @@
 /* src/app/globals.css */
 
 /* Ordre des layers (important) */
+/* @layer reset, base, tokens, layout, utilities; */
 @layer reset, tokens, base, layout, utilities;
 
 /* 1) Custom media d’abord */
@@ -9,7 +10,6 @@
 /* 2) Reset + tokens */
 @import "../styles/reset.css";
 @import "../styles/tokens.css";
-@import "../styles/tokens.theme-dark.css";
 
 /* 3) Base */
 @import "../styles/base.css";
