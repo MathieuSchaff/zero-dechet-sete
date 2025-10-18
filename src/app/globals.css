@@ -1,48 +1,23 @@
-:root {
-  --bg: #fff;
-  --fg: #0b0b0b; /* ... */
-}
-[data-theme="dark"] {
-  --bg: #dc1d1d;
-  --fg: #15377a; /* ... */
-}
+/* src/app/globals.css */
 
-html,
-body {
-  background: var(--bg);
-  color: var(--fg);
-  max-width: 100vw;
-  overflow-x: hidden;
-}
+/* Ordre des layers (important) */
+@layer reset, tokens, base, layout, utilities;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* 1) Custom media d’abord */
+@import "../styles/media-queries.css";
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* 2) Reset + tokens */
+@import "../styles/reset.css";
+@import "../styles/tokens.css";
+@import "../styles/tokens.theme-dark.css";
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+/* 3) Base */
+@import "../styles/base.css";
+@import "../styles/typography.css";
+@import "../styles/typography.fluid.css";
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+/* 4) Layout générique */
+@import "../styles/layout.css";
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
+/* 5) Utilities en dernier */
+@import "../styles/utilities.css";

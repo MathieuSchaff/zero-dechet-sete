@@ -1,0 +1,16 @@
+@layer layout {
+  .container {
+    width: 100%;
+    max-width: var(--max-width-xl); /* limite la largeur */
+    margin-inline: auto; /* centre horizontalement */
+    padding-inline: var(--space-4); /* padding latéral */
+
+    @media (--tablet) {
+      padding-inline: var(--space-6);
+    }
+
+    @media (--desktop) {
+      padding-inline: var(--space-8);
+    }
+  }
+}

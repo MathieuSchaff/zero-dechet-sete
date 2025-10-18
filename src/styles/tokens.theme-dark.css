@@ -1,0 +1,13 @@
+@layer tokens {
+  body[data-theme="dark"] {
+    --color-bg-primary: var(--color-neutral-900);
+    --color-bg-secondary: var(--color-neutral-800);
+    --color-bg-tertiary: var(--color-neutral-700);
+    --color-text-primary: var(--color-neutral-50);
+    --color-text-secondary: var(--color-neutral-300);
+    --color-text-tertiary: var(--color-neutral-400);
+    --color-border-light: var(--color-neutral-700);
+    --color-border-medium: var(--color-neutral-600);
+    --color-border-dark: var(--color-neutral-500);
+  }
+}

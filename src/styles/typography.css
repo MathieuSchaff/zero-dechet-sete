@@ -1,0 +1,86 @@
+@layer base {
+  /* Titres = Sora ; texte = Inter (défini dans base.css pour body) */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-sora), var(--font-inter), sans-serif;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    /* Petit espace au-dessus quand un titre suit un bloc */
+    margin-top: var(--space-6);
+  }
+
+  h1 {
+    font-size: var(--font-size-4xl);
+    line-height: var(--line-height-tight);
+  }
+  h2 {
+    font-size: var(--font-size-3xl);
+    line-height: var(--line-height-tight);
+  }
+  h3 {
+    font-size: var(--font-size-2xl);
+    line-height: var(--line-height-tight);
+  }
+  h4 {
+    font-size: var(--font-size-xl);
+  }
+  h5 {
+    font-size: var(--font-size-lg);
+  }
+  h6 {
+    font-size: var(--font-size-base);
+  }
+
+  p {
+    margin-bottom: var(--space-4);
+  }
+
+  /* Liens (Inter par défaut via body) */
+  a {
+    color: var(--color-primary-600);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    &:hover {
+      color: var(--color-primary-700);
+      text-decoration: underline;
+    }
+    &:focus-visible {
+      outline: 2px solid var(--color-primary-500);
+      outline-offset: 2px;
+      border-radius: var(--radius-sm);
+    }
+  }
+
+  strong,
+  b {
+    font-weight: var(--font-weight-bold);
+  }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas,
+      "Liberation Mono", monospace;
+    font-size: 0.9em;
+    background-color: var(--color-neutral-100);
+    padding: 0.125rem 0.25rem;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Petites améliorations lisibilité */
+  :where(p, li) > code {
+    /* code inline un poil moins accentué */
+    background-color: color-mix(
+      in oklab,
+      var(--color-neutral-100),
+      transparent 30%
+    );
+  }
+
+  /* Évite le double margin quand un titre est le 1er enfant */
+  :where(main, section, article) > :first-child {
+    margin-top: 0;
+  }
+}
