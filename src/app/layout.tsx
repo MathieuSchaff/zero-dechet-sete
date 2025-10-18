@@ -50,9 +50,8 @@ export default async function RootLayout({
       lang="fr"
       suppressHydrationWarning
       className={`${sora.variable} ${inter.variable}`}
-      data-theme={theme}
     >
-      <body>
+      <body data-theme={theme}>
         <Header />
         <main className="container">{children}</main>
       </body>
