@@ -1,0 +1,6 @@
+.nav {
+}
+.nav__list {
+  display: flex;
+  flex-direction: column;
+}

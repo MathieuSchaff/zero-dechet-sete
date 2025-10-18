@@ -1,18 +1,15 @@
-import Nav from "./Nav";
-import { ThemeToggle } from "./ThemeToggle";
+import Nav from "../Nav/Nav";
+import { ThemeToggle } from "../ToggleTheme/ThemeToggle";
 
 export default function Header() {
   return (
     <header className="site-header">
       <div className="site-header__inner">
         <div className="brand">
-          {/* TODO: Remplace par ton logo */}
-          {/* <a href="/" className="brand__logo">
-            ZeroDechet
-          </a> */}
+          <a href="/" className="brand__logo"></a>
         </div>
 
-        {/* <Nav /> */}
+        <Nav />
 
         <div className="header-actions">
           <ThemeToggle />
