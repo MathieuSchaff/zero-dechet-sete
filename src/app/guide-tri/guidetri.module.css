@@ -1,0 +1,149 @@
+@layer base {
+  .main {
+    min-height: 100vh;
+    background-color: var(--color-bg-primary); /* ✅ Variable */
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    @media (min-width: 640px) {
+      padding: 0 1.5rem;
+    }
+    @media (min-width: 1024px) {
+      padding: 0 2rem;
+    }
+  }
+
+  .hero {
+    background-color: var(--color-primary-600);
+    color: var(--color-text-on-primary); /* ✅ Variable */
+    padding: 4rem 0;
+  }
+
+  .heroTitle {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    @media (min-width: 768px) {
+      font-size: 3rem;
+    }
+  }
+
+  .heroText {
+    font-size: 1.125rem;
+    max-width: 48rem;
+    line-height: 1.5;
+    @media (min-width: 768px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .sectionAlt {
+    background-color: var(--color-bg-secondary); /* ✅ Variable */
+    padding: 3rem 0;
+  }
+
+  .sectionTitle {
+    font-size: 1.875rem;
+    font-weight: 600;
+    color: var(--color-text-primary); /* ✅ Variable */
+    margin-bottom: 1.5rem;
+  }
+
+  .sectionText {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary); /* ✅ Variable */
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .card {
+    background-color: var(
+      --color-bg-primary
+    ); /* ✅ Variable au lieu de white */
+    padding: 1.5rem;
+    border-radius: var(--radius-lg); /* ✅ Variable */
+    box-shadow: var(--shadow-md); /* ✅ Variable */
+    border: 1px solid var(--color-border-light); /* ✅ Ajout pour le contraste en dark */
+    transition: var(--transition-base); /* ✅ Variable */
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-lg); /* ✅ Variable */
+  }
+
+  .cardTitle {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-primary-600); /* ✅ Ça reste primary */
+    margin-bottom: 0.75rem;
+  }
+
+  .cardText {
+    color: var(--color-text-secondary); /* ✅ Variable */
+    line-height: 1.5;
+  }
+
+  .list {
+    list-style-type: disc;
+    padding-left: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--color-text-secondary); /* ✅ Variable */
+  }
+
+  .link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-primary-600);
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition-fast); /* ✅ Variable */
+  }
+
+  .link:hover {
+    color: var(--color-primary-700);
+  }
+
+  .icon {
+    margin-left: 0.5rem;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .button {
+    display: inline-block;
+    background-color: var(--color-accent-500); /* ✅ Accent pour CTA */
+    color: var(--color-text-on-primary); /* ✅ Variable */
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md); /* ✅ Variable */
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition-base); /* ✅ Variable */
+    border: none;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: var(--color-accent-600);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+}
