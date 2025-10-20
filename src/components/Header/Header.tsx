@@ -13,19 +13,23 @@ export default function Header() {
       </a>
 
       <div className={styles.siteHeaderInner}>
-        <div className={styles.brand}>
-          <Link href="/" aria-label="Accueil" className={styles.brandLogo}>
-            {/* Élément décoratif pour afficher le “logo” via CSS */}
-            <span aria-hidden="true" />
-          </Link>
-        </div>
+        <Link href="/" aria-label="Accueil" className={styles.brandLogo}>
+          ZDS LOGO
+          <span aria-hidden="true" />
+        </Link>
 
         <Nav />
 
-        <div className={styles.headerActions}>
-          <ThemeToggle />
-          {/* TODO: Ajoute un bouton Login/Profil ici si besoin */}
-        </div>
+        <ThemeToggle />
+        {/* TODO: Ajoute un bouton Login/Profil ici si besoin */}
+
+        <Link href="/login" aria-label="login" className={""}>
+          login
+        </Link>
+
+        <Link href="/sign-up" aria-label="sign up" className={""}>
+          Sign up
+        </Link>
       </div>
     </header>
   );
