@@ -1,0 +1,9 @@
+.toggle {
+  /* background-color: var(--color-bg-tertiary); */
+  background-color: var(--color-bg-);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2) var(--space-2);
+  /* &:hover {
+    background-color: red;
+  } */
+}

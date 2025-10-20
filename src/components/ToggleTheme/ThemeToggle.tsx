@@ -2,18 +2,11 @@
 
 import { useState, useEffect, useTransition } from "react";
 import { setTheme, type ThemeChoice } from "@/app/actions/theme";
-
+import styles from "./themetoggle.module.css";
 const order: ThemeChoice[] = ["light", "dark", "system"];
 
 export function ThemeToggle() {
-  console.log("1");
-  // const [current, setCurrent] = useState<ThemeChoice>(() => {
-  //   if (typeof document === "undefined") return "system";
-  //   const attr = document.documentElement.getAttribute("data-theme");
-  //   return (attr as "light" | "dark") ?? "system";
-  // });
   const [current, setCurrent] = useState<ThemeChoice>("system");
-  console.log("current", current);
   const [isPending, startTransition] = useTransition();
 
   // Lis le thème courant depuis l'attribut SSR (pas de flash)
@@ -38,12 +31,11 @@ export function ThemeToggle() {
       : current === "dark"
       ? "🌙 Dark"
       : "🖥️ System";
-  console.log("label", label);
   return (
     <>
       {" "}
       <button
-        className="btn btn-outline"
+        className={styles.toggle}
         onClick={onClick}
         disabled={isPending}
         aria-label="Toggle theme"
