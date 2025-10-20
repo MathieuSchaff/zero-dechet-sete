@@ -6,3 +6,7 @@
 
 @custom-media --compact (max-height: 700px);
 @custom-media --wide (min-aspect-ratio: 16/9);
+
+/* A tester, mais ne semble pas marcher */
+@custom-media --tablet2 (width >= 640px);
+@custom-media --desktop3 (width >= 1024px);
