@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "dev-wt": "next dev"
   },
   "browserslist": [
     "defaults and supports css-nesting and supports css-container-queries"
@@ -43,13 +44,18 @@
     "zsa": "^0.6.0"
   },
   "devDependencies": {
+    "@csstools/postcss-global-data": "^3.1.0",
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.21",
     "drizzle-kit": "^0.31.5",
     "eslint": "^9",
     "eslint-config-next": "15.5.4",
+    "postcss": "^8.5.6",
+    "postcss-custom-media": "^11.0.6",
+    "postcss-nesting": "^13.0.2",
     "postcss-preset-env": "^10.4.0",
     "tsx": "^4.20.6",
     "typescript": "^5"
