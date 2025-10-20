@@ -1,17 +1,22 @@
 // postcss.config.js
+// console.log("PostCSS config loaded!!!!");
+console.log("PostCSS config grok!!!!");
+
 module.exports = {
   plugins: {
-    'postcss-preset-env': {
-      // Stage par défaut ≈ Stage 2 (bon équilibre stabilité/modernité)
-      // -> active @layer, nesting, etc. selon ta Browserslist.
-      // (Tu peux forcer certaines features ci-dessous.)
+    "@csstools/postcss-global-data": {
+      files: ["src/styles/media-queries.css"],
+    },
+    "postcss-custom-media": {},
+    "postcss-preset-env": {
+      stage: 1,
       features: {
-        'nesting-rules': true,            // CSS Nesting natif
-        'custom-media-queries': true,     // @custom-media
-        // 'logical-properties-and-values': false, // ex: tu peux désactiver si tu veux
+        "nesting-rules": true,
+        "custom-media-queries": false,
       },
-      autoprefixer: { grid: true },       // si besoin de préfixes grid
+      autoprefixer: {
+        grid: true,
+      },
     },
   },
 };
-
