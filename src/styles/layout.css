@@ -4,7 +4,6 @@
     max-width: var(--max-width-xl);
     margin-inline: auto;
     padding-inline: var(--space-4);
-    height: 20px;
     background-color: green;
     @media (--tablet) {
       padding-inline: var(--space-6);

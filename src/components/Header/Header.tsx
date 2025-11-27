@@ -3,6 +3,7 @@ import Link from "next/link";
 import Nav from "../Nav/Nav";
 import { ThemeToggle } from "../ToggleTheme/ThemeToggle";
 import styles from "./header.module.css"; // ← importer comme Module
+import AuthModalLink from "@/components/Modal/auth/AuthModalLink";
 
 export default function Header() {
   return (
@@ -23,13 +24,8 @@ export default function Header() {
         <ThemeToggle />
         {/* TODO: Ajoute un bouton Login/Profil ici si besoin */}
 
-        <Link href="/login" aria-label="login" className={""}>
-          login
-        </Link>
-
-        <Link href="/sign-up" aria-label="sign up" className={""}>
-          Sign up
-        </Link>
+        <AuthModalLink href="/login">Login</AuthModalLink>
+        <AuthModalLink href="/signup">Sign up</AuthModalLink>
       </div>
     </header>
   );
