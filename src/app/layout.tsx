@@ -3,6 +3,7 @@ import "./globals.css";
 import { cookies } from "next/headers";
 import { Inter, Sora } from "next/font/google";
 import Header from "@/components/Header/Header";
+import React from "react";
 
 // 🎨 Fonts
 const inter = Inter({
@@ -39,8 +40,10 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   const cookieStore = await cookies();
   const theme = cookieStore.get("theme")?.value ?? "system";
@@ -54,6 +57,7 @@ export default async function RootLayout({
       <body data-theme={theme}>
         <Header />
         <main className="container">{children}</main>
+        {modal}
       </body>
     </html>
   );
